@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import axios from 'axios';
 
 const url = 'https://notes-backend-72rh.onrender.com/';
@@ -14,6 +15,10 @@ const getAllNotes = async (setNote) => {
 
 const addNote = async (title, setTitle, setNote) => {
   try {
+    if (!title) {
+      Swal.fire("Please write a note!");
+      return;
+    } 
     const { data } = await axios.post(`${url}addNotes`, { title });
     console.log(data);
     setTitle('');
