@@ -27,15 +27,34 @@ button {
 .App {
   margin: 5rem auto 0;
   padding: 2rem 0;
-  width: 35%;
+  width: 100%;
+  max-width: 700px; 
   min-height: 80vh;
   text-align: center;
   background-color: #F5F7F8;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
+@media all and (max-width: 1024px) {
+  .App {
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .App {
+    width: 80%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .App {
+    width: 90%;
+  }
+}
+
 .App__title {
-  font-size: 3.5rem;
+  font-size: 3.5em;
   font-family: "Itim", cursive;
   font-weight: 400;
   font-style: normal;
